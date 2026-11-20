@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-20",
+  "builds": [
+    {
+      "mode": "local",
+      "checks": 126,
+      "passed": 126,
+      "issues": [],
+      "robots_checked": true
+    },
+    {
+      "mode": "main",
+      "checks": 126,
+      "passed": 126,
+      "issues": [],
+      "robots_checked": true
+    },
+    {
+      "mode": "preview",
+      "checks": 126,
+      "passed": 126,
+      "issues": [],
+      "robots_checked": true
+    }
+  ],
+  "production_deployment_verified": false
+}
