@@ -1,5 +1,5 @@
 {
-  "siteUrl": "",
+  "siteUrl": "https://bonzo-portfolio.pages.dev",
   "brand": "bonzo",
   "contactEmail": null,
   "contactApproved": false,
@@ -10,6 +10,6 @@
     "youtube": "https://www.youtube.com/@キョウトユウギオフィシャル",
     "x": null
   },
-  "youtubeOpeningId":"5o_oWOkj0E4",
+  "youtubeOpeningId": "5o_oWOkj0E4",
   "tracks": []
 }

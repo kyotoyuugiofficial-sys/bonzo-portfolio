@@ -1,51 +1,37 @@
-# WORK_PROGRESS — bonzo portfolio
+# bonzo portfolio / WORK_PROGRESS
 
 更新：2026-11-20（日本時間）
 
-## 完了
-- 日本語・英語トップと音楽ページ、レスポンシブ表示、クリック同意後のYouTube読込、SEO・OGP、404を実装。
-- 独立した新規リポジトリ kyotoyuugiofficial-sys/bonzo-portfolio を作成。Webソースのみをmainへ保存する構成。
-- Git連携向けの設定をDEPLOYMENT.mdに記録。外部依存パッケージなし。
-- 問い合わせ先とnoteが未確定でもビルド可能。未承認の連絡先や架空URLは出力しない。
-- Cloudflareの実デプロイURLを自動読込。プレビューbranchはnoindex。
-- X用アイコン・ヘッダー、プロフィール、固定ポスト・初期投稿5件、noteプロフィール・記事3本、GitHubプロフィールREADME、パブリッシャー向け日英プロフィールを別途作成済み。未承認原稿はこの公開リポジトリに含めない。
+## 現在の公開先
+- https://bonzo-portfolio.pages.dev/
+- GitHub: kyotoyuugiofficial-sys/bonzo-portfolio / main
+- Cloudflare PagesはGitHub連携で更新。WorkによるCloudflareログイン・パスワード再設定は中止を継続。
 
-## 方針・保護対象
-- CloudflareのWorkブラウザによるログイン、ログイン再試行、パスワード再設定は中止。通常のChromeで所有者がGitHubとPagesを連携する。
-- 既存のキョウトユウギ公式サイト・リポジトリには、この段階で変更を加えない。
-- ゲーム本編コード、未公開シナリオ、秘密情報、購入した音源は含めない。
-
-## 未完了
-- 所有者によるCloudflare PagesのGit連携・初回公開。設定はDEPLOYMENT.mdを参照。
-- 問い合わせ先の公開承認、note本人URLの確定。
-- X・note新規アカウントの登録承認と本人認証。投稿・記事の公開承認。
-- GitHubプロフィール原稿の確認と反映。
-- 正式音源のファイル・権利・公開範囲の確認。
+## 今回の変更
+- main最新版 0540d8e890c424497257484da9ef9d6e13a0ab8f を新規cloneして編集。過去のZIPは使用していない。
+- 日本語・英語の抽象的な標語と説明文を直接的な情報へ変更。
+- 通常の見出し、コンパクトな余白、単純な画像とリンクの構成へ変更。巨大文字、波形、画像上の重ね文字を撤去。
+- ナビゲーションに関連リンクを追加。このサイトのGitHubソースへのリンクを追加。
+- OP動画を開閉式にし、クリック後にYouTubeをロードする仕様を維持。
+- 公開済みの本番URLをsiteUrlへ設定。
+- 既存の作品公式サイト、人物配置、ゲーム本編には変更しない。
 
 ## 検証
-- 元サイトのPC、390px・768px幅、メニュー、日英切替、音楽ページ、YouTube読込をブラウザで確認済み。
-- 静的チェック126項目通過。今回のGit連携用変更について、ローカル・Pages本番・Pagesプレビューを模した3通りのビルドで各126項目が通過。robotsの索引制御とOGP絶対URLも確認済み。
-- 本番URL、Cloudflare内の実ビルド、実機iOS/Android/Safari、音付き動画全編・音源試聴は未検証。
+- ローカルで日英4ページをビルド。静的チェック通過。
+- PC見出し32px、横はみ出しなし。
+- 390pxと768pxのiframe viewportで横はみ出しなし。
+- モバイルメニューの開閉とリンク選択後の閉じ動作を確認。
+- OPの開閉パネルとYouTube埋め込みの読込、英語音楽ページを確認。
+- GitHub保存後のPages自動反映・公開画面は次に確認する。
+- 実機iOS/Android/Safari、音付き動画の全編再生は未検証。
 
-## ファイル
-- build.mjs / check.mjs / package.json：ビルドと検証
-- content/settings.json：確認済みリンク、連絡先、音源登録
-- static/：Webデザインと公開済みの作品紹介画像
-- DEPLOYMENT.md：通常のChromeから行うPages設定
-- WORK_PROGRESS.md：この再開記録
+## 未確認・保留
+- 今回の依頼本文は末尾「見」で途切れており、新規SNS URLなどの追加指定は含まれていない。新しいURLは推測していない。
+- note本人URL、X本人URL、問い合わせ先の公開承認、正式な試聴音源は未確認。サイトは準備中表示を維持。
+- note記事・X投稿・GitHubプロフィール原稿は以前に作成済み。未承認の記事公開や本人認証は行わない。
 
-## 次回Workの手順
-1. このリポジトリのmainと本ファイルを読む。以前の保存先や古いZIPで上書きしない。
-2. Pagesの公開URLが提供されていれば、その実URLを検証してSITE_URLを確定する。
-3. npm run build && npm run check を実行し、公開された日英4ページと画像・動画・OGPを検証する。
-4. 承認済みの連絡先と確認済みnote URLを設定し、GitHub更新で自動デプロイを確認する。
-5. X/note/GitHubプロフィールの未公開原稿を所有者と確認し、認証と承認のある範囲で設定を続ける。
-
-本番URL：未発行。Cloudflare接続は所有者の操作待ち。GitHub保存とWeb公開は区別する。
-
-## 今回の保存結果とSNS状態
-- 新規独立repoのWeb実装保存コミット：7d4c13bebdb2685c4e1d1fa8654bff3574637f7a。GitHub上でmainのファイルを再読込して確認。
-- X：Workブラウザからの接続がERR_HTTP_RESPONSE_CODE_FAILUREで失敗。登録・設定・投稿は未実施。迂回や再試行は行わない。
-- note：ログアウト状態を確認。新規登録・記事下書きのサービス内保存には本人アカウントの認証が必要。原稿3本は作成済みで、公開していない。
-- GitHubプロフィールは内容確認用原稿を作成済み。既存プロフィールの上書きや未承認の公開は行っていない。
-- この段階では既存作品公式repoに書込操作をしていない。
+## 次回の手順
+1. main最新版とこの記録を読む。古いZIPで上書きしない。
+2. 公開ページの反映結果を確認する。
+3. 所有者から追加リンクURLや承認済み問い合わせ先を受けたらcontent/settings.jsonへ設定。
+4. npm run build && npm run check を通してGitHub連携で更新し、公開ページも検証する。
